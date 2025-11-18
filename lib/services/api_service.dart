@@ -11,7 +11,7 @@ class ApiService {
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
 
-      List<Question> questions = (data['results'] as List)
+      List<Question> questions = (data['Results'] as List)
           .map((q) => Question.fromJson(q))
           .toList();
 

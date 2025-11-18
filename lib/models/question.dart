@@ -11,14 +11,14 @@ class Question {
 
   factory Question.fromJson(Map<String, dynamic> json) {
     List<String> options =
-        List<String>.from(json['Incorrect_answers']);
-    options.add(json['Correct_answer']);
+        List<String>.from(json['incorrect_answers']);
+    options.add(json['correct_answer']);
     options.shuffle();
 
     return Question(
-      question: json['Question'],
+      question: json['question'],
       options: options,
-      correctAnswer: json['Correct_answer'],
+      correctAnswer: json['correct_answer'],
     );
   }
 }
